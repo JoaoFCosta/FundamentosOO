@@ -135,27 +135,62 @@ internal class Program
 
         //Instanciando um objeto da classe animal subclasse gato
 
-        Gato gato1 = new Gato();
-        gato1.Nome = "Sophia";
-        Console.WriteLine(gato1.Nome + " disse:");
-        gato1.emitirsom();
+        //Gato gato1 = new Gato();
+        //gato1.Nome = "Sophia";
+        //Console.WriteLine(gato1.Nome + " disse:");
+        //gato1.emitirsom();
 
-        Gato gato2 = new Gato();
-        gato2.Nome = "Renatão";
-        gato2.Especie = "Persa";
-        Console.WriteLine(gato2.Nome + " da raça, " + gato2.Especie + " faz:");
-        gato2.emitirsom();
+        //Gato gato2 = new Gato();
+        //gato2.Nome = "Renatão";
+        //gato2.Especie = "Persa";
+        //Console.WriteLine(gato2.Nome + " da raça, " + gato2.Especie + " faz:");
+        //gato2.emitirsom();
 
-        Porco porco1 = new Porco();
-        porco1.Nome = "Rodolfo";
-        porco1.Especie = "American Yorkshire";
-        Console.WriteLine(porco1.Nome + " da raça, " + porco1.Especie + " faz:");
-        porco1.emitirsom();
+        //Porco porco1 = new Porco();
+        //porco1.Nome = "Rodolfo";
+        //porco1.Especie = "American Yorkshire";
+        //Console.WriteLine(porco1.Nome + " da raça, " + porco1.Especie + " faz:");
+        //porco1.emitirsom();
 
-        Galinha galinha1 = new Galinha();
-        galinha1.Nome = "Helena";
-        galinha1.Especie = "Caipira";
-        Console.WriteLine(galinha1.Nome + " da raça, " + galinha1.Especie + " faz:");
-        galinha1.emitirsom();
+        //Galinha galinha1 = new Galinha();
+        //galinha1.Nome = "Helena";
+        //galinha1.Especie = "Caipira";
+        //Console.WriteLine(galinha1.Nome + " da raça, " + galinha1.Especie + " faz:");
+        //galinha1.emitirsom();
+
+        Mago mago1 = new Mago();
+        mago1.Nome = "Jeferson";
+        mago1.Categoria = "Mago";
+        mago1.Nivel = 6;
+        mago1.Forca = 70;
+        mago1.Agilidade = 40;
+        mago1.Inteligencia = 90;
+        mago1.Vida = 50;
+
+
+        Elfo elfo1 = new Elfo();
+        elfo1.Nome = "Pequenelson";
+        elfo1.Categoria = "Elfo";
+        elfo1.Nivel = 5;
+        elfo1.Forca = 50;
+        elfo1.Agilidade = 80;
+        elfo1.Inteligencia = 60;
+        elfo1.Vida = 40;
+
+
+        Cavaleiro cavaleiro1 = new Cavaleiro();
+        cavaleiro1.Nome = "Pegevision";
+        cavaleiro1.Categoria = "Cavaleiro";
+        cavaleiro1.Nivel = 7;
+        cavaleiro1.Forca = 90;
+        cavaleiro1.Agilidade = 50;
+        cavaleiro1.Inteligencia = 60;
+        cavaleiro1.Vida = 80;
+
+        mago1.apresentarSe();
+        elfo1.apresentarSe();
+        cavaleiro1.apresentarSe();
+
+        mago1.batalhar(elfo1);
     }
 }

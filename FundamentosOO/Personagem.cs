@@ -67,11 +67,11 @@ namespace FundamentosOO
             }
         }
 
-        public int vitoriasNecessariasParaEvoluir = 2;
-        public int vitorias = 0;
-
         public virtual void Evoluir()
         {
+            int vitoriasNecessariasParaEvoluir = 2;
+            int vitorias = 0;
+
             if (vitorias >= vitoriasNecessariasParaEvoluir)
             {
                 Nivel++;

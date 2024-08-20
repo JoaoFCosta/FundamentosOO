@@ -67,14 +67,18 @@ namespace FundamentosOO
             }
         }
 
-        int vitoriasParaEvoluir = 2;
-        int vitorias = 0;
+        public int vitoriasNecessariasParaEvoluir = 2;
+        public int vitorias = 0;
 
-        public virtual void ganharBatalha()
+        public virtual void Evoluir()
         {
-            if (vitorias >= vitoriasParaEvoluir)
+            if (vitorias >= vitoriasNecessariasParaEvoluir)
             {
-                evoluir();
+                Nivel++;
+            }
+            else
+            {
+                Console.WriteLine("Vença mais batalhas para subir de nível");
             }
         }
     }

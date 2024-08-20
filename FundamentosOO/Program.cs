@@ -191,6 +191,12 @@ internal class Program
         elfo1.apresentarSe();
         cavaleiro1.apresentarSe();
 
-        mago1.batalhar(elfo1);
+        cavaleiro1.batalhar(elfo1);
+        Console.WriteLine("======================================");
+        cavaleiro1.Evoluir();
+        Console.WriteLine("======================================");
+        cavaleiro1.batalhar(mago1);
+        Console.WriteLine("======================================");
+        cavaleiro1.Evoluir();
     }
 }

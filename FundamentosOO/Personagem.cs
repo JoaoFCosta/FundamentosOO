@@ -32,10 +32,20 @@ namespace FundamentosOO
             pontosDefesa = (this.Inteligencia + this.Forca + (this.Agilidade * 2) + this.Nivel + this.Vida) / 2;
             return pontosDefesa;
         }
+        public virtual void evoluir()
+        {
+            this.Nivel++;
+            this.Forca += 10;
+            this.Inteligencia += 10;
+            this.Agilidade += 10;
+            Console.WriteLine("O Jogador " + this.Nome + " evoluiu para o nível " + this.Nivel + ". Seus novos valores são: \nAgilidade: " + this.Agilidade + "\nInteligência: " + this.Inteligencia + "\nForça: " + this.Forca);
+        }
 
         public virtual void batalhar(Personagem p)
         {
-            while (this.Vida > 0 || p.Vida > 0)
+
+            bool vencedor = false;
+            while (vencedor == false)
             {
                 int valorAtaque = this.atacar();
                 int valorDefesaInimigo = p.defender();
@@ -48,6 +58,9 @@ namespace FundamentosOO
                 if (p.Vida <= 0)
                 {
                     Console.WriteLine(this.Nome + " venceu a batalha!");
+                    Console.WriteLine("=======================================================================");
+                    vencedor = true;
+                    this.evoluir();
                     break;
                 }
 
@@ -62,23 +75,11 @@ namespace FundamentosOO
                 if (this.Vida <= 0)
                 {
                     Console.WriteLine(p.Nome + " venceu a batalha!");
+                    Console.WriteLine("=======================================================================");
+                    vencedor = true;
+                    p.evoluir();
                     break;
                 }
-            }
-        }
-
-        public virtual void Evoluir()
-        {
-            int vitoriasNecessariasParaEvoluir = 2;
-            int vitorias = 0;
-
-            if (vitorias >= vitoriasNecessariasParaEvoluir)
-            {
-                Nivel++;
-            }
-            else
-            {
-                Console.WriteLine("Vença mais batalhas para subir de nível");
             }
         }
     }

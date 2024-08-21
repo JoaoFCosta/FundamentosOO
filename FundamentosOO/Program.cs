@@ -179,7 +179,7 @@ internal class Program
 
 
         Cavaleiro cavaleiro1 = new Cavaleiro();
-        cavaleiro1.Nome = "Pegevision";
+        cavaleiro1.Nome = "Peguevision";
         cavaleiro1.Categoria = "Cavaleiro";
         cavaleiro1.Nivel = 7;
         cavaleiro1.Forca = 90;
@@ -192,11 +192,6 @@ internal class Program
         cavaleiro1.apresentarSe();
 
         cavaleiro1.batalhar(elfo1);
-        Console.WriteLine("======================================");
-        cavaleiro1.Evoluir();
-        Console.WriteLine("======================================");
-        cavaleiro1.batalhar(mago1);
-        Console.WriteLine("======================================");
-        cavaleiro1.Evoluir();
+        Console.WriteLine("=======================================================================");
     }
 }
